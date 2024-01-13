@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pradeep Portfolio Website
+  </title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/2ce1a97fb6.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script src="custom.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="images/logo.png" class="logo">
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Projects</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+        </ul>
+
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+
+      </nav>
+      <div class="header-text">
+        <span class="auto-type"></span>
+        <h1>Hi, I'm <span>Pradeep Sajnani</span><br>from India</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- ------------------------About-------------------- -->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/userp.png">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p class="sub-title-2">As a tech enthusiast from a
+            very early age which has enabled me to learn a lot about technology and fall
+            in love with it and make it my passion. As an Associate Software Engineer at Nagarro Software Pvt Ltd,
+            I bring hands-on experience in full-stack development using technologies such as ASP.NET, HTML,
+            JavaScript, React, Angular, and Node.js. My key roles include collaborating with cross-functional teams,
+            developing and maintaining web applications, and ensuring code quality through testing and code
+            reviews. In addition to this, I have a vast knowledge in Cloud Computing and Web Development.
+          </p>
+
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')"> Skills </p>
+            <p class="tab-links" onclick="opentab('experience')"> Experience </p>
+            <p class="tab-links" onclick="opentab('education')"> Education </p>
+            <p class="tab-links" onclick="opentab('certification')">Certification </p>
+          </div>
+          <!-- ---------------------------Skillls----------------------- -->
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Web Development</span>
+                <br> Front-end Development
+              </li>
+              <li><span>Cloud Computing</span>
+                <br>AWS (Intermediate), Azure (Advanced)
+              </li>
+              <li><span>Information Security</span>
+                <br>Practicing Security Frameworks
+              </li>
+
+            </ul>
+          </div>
+          <!-- ---------------------------Experience------------------ -->
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>Associate Software Developer
+                  Nagarro | Gurugram, India (Jul 2022 - Sep 2023)</span>
+                <br> Full-Stack development Training & Hands-on experience.
+              </li>
+              <li><span>Training - Internship (Jan 2022 - Jun 2023)</span>
+                <br>At DotSquares pvt ltd | Jaipur, India.
+              </li>
+              <li><span>Training & learning</span>
+                <br>Practicing Cyber Security at Intenshala labs.
+              </li>
+
+            </ul>
+          </div>
+          <!-- -------------------------Education---------------------- -->
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>2022 - Graduation </span>
+                <br> B-Tech in Computer Science Speiclizaion with Cloud Computing & Information Security from Poornima
+                University, Jaipur, India.
+              </li>
+              <li><span>2016 - Senior Secondary</span>
+                <br> Scince & Maths from All Saints Sen Secondary school, Ajmer, India.
+              </li>
+
+            </ul>
+          </div>
+          <!-- -------------------------------Certifications------------------------- -->
+          <div class="tab-contents" id="certification">
+            <ul>
+              <li><span>Microsoft Azure Certified (2021- Current) </span>
+                <br> Azure Fundamentals (AZ-900)
+              </li>
+              <li>Azure AI Fundamentals (AI-900)</li>
+              <li>Azure Data Fundamentals (DP-900)</li>
+              <li>Power Platform Fundamentals (PL-900)</li>
+              <li><span>Adobe UX/UI design </span>
+                <br> Issued by Future Skill Prime
+              </li>
+
+            </ul>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- -----------------------Services----------------- -->
+  <div id="services">
+    <div class="container">
+      <h1 class="sub-title">My Projects</h1>
+      <div class="services-list">
+        <div>
+          <i class="fa-brands fa-react fa-spin-pulse"></i>
+          <h2>Blog Post App (React Application)</h2>
+          <p>Developed a React application with the goal of creating a "Blog Post
+            App." The application allows users to view a list of blog posts, add new posts, view
+            post details, edit existing posts, and delete posts.</p><br>
+          <p><b>Technologies Used:</b> React, JavaScript, HTML, CSS</p>
+          <a href="#">Learn more</a>
+        </div>
+        <div>
+          <i class="fa-solid fa-cloud"></i>
+          <h2>Azure Cloud Services Integration Project</h2>
+          <p>
+          <ul>
+            <li>Set up a virtual network with two subnets.</li>
+            <li>Launched a VM within one subnet to run a Node.js app and connected it to a cloud database</li>
+            <li>Deployed an AKS cluster for services.</li>
+            <li>Created an Azure function that prints the name of any uploaded file in blob storage.</li>
+          </ul>
+          </p><br>
+          <p>Technologies Used: C#, Azure Kubernetes Cluster, Cloud shell, Node JS Application, Azure App
+            Service, Docker Service, Linux CLI etc.</p>
+          <a href="#">Learn more</a>
+        </div>
+        <div>
+          <i class="fa-brands fa-node-js"></i>
+          <h2>Result Management Application
+          </h2>
+          <p>Created a user-friendly web app where teachers manage student records, while students can check their
+            results. Integrated a cloud-based MongoDB database for easy access from anywhere.</p><br>
+          <p><b>Technologies Used:</b> HTML, CSS, JavaScript, MongoDB & NodeJS</p>
+          <a href="#">Learn more</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- -----------------------------portfolio------------ -->
+  <div id="portfolio">
+    <div class="container">
+      <h1 class="sub-title">My Services</h1>
+      <div class="work-list">
+        <div class="work">
+
+          <img src="images/code-work.png">
+
+          <div class="layer">
+            <h3>Web/App Development</h3>
+            <p>Turning ideas into interactive digital solutions through web and app development.</p>
+            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square" style="color: #ff004f;"></i></a>
+          </div>
+
+        </div>
+
+
+        <div class="work">
+          <img src="images/cloud-work.png">
+          <div class="layer">
+            <h3>"Development & Cloud Solutions</h3>
+            <p>Providing development and cloud solutions to empower your digital journey, ensuring scalability,
+              security,
+              and exceptional user experiences.</p>
+            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square" style="color: #ff004f;"></i></a>
+          </div>
+        </div>
+
+
+        <div class="work">
+          <img src="images/cyber-work.png">
+          <div class="layer">
+            <h3>Security Solutions</h3>
+            <p>Enhancing your digital protection through expert guidance.</p>
+            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square" style="color: #ff004f;"></i></a>
+          </div>
+        </div>
+
+      </div>
+      <a href="#" class="btn">See more</a>
+    </div>
+  </div>
+
+  <!-- --------------------------------Contact------------------ -->
+  <div id="contact">
+
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <p><i class="fa-solid fa-envelope"></i>pradeeepsajnani742@gmail.com</p>
+          <p> <i class="fa-solid fa-phone"></i>+91 6375375042 </p>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/pradeep-sajnani-ab99a91b7/" target="_blank"><i
+                class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/Pradeep7867" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://web.telegram.org/k/" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+          </div>
+
+          <a href="images/my-cv.pdf" download class="btn btn2"> Download my CV</a>
+        </div>
+
+        <div class="contact-right">
+          <form name="submit-to-google-sheet"  method="/post" autocomplete="off">
+            <input type="text" name="Name" placeholder="Your Name" required autocomplete="off">
+
+            <input type="email" name="Email" placeholder="Your Email" required autocomplete="off">
+
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+
+            <button type="submit" class="btn btn2">Submit</button>
+
+          </form>
+          <span id="msg"></span>
+        </div>
+      </div>
+
+    </div>
+    <div class="copyright">
+      <p>Copyright <i class="fa-regular fa-copyright"></i> Pradeep, Made by Pradeep's Tutorial</p>
+    </div>
+  </div>
+</body>
+
+<!----------------Script for typewriter------------->
+ 
+<script>
+
+var typed = new Typed(".auto-type",{
+  strings : ["Associate Software Engineer","Cloud Engineer","Developer"],
+  typeSpeed :150,
+  backSpeed :150,
+  loop : true
+
+})
+</script>
+<!-- -----------------------mobile script------------->
+<script>
+var sidemenu = document.getElementById("sidemenu");
+
+function openmenu(){
+  sidemenu.style.right="0";
+}
+
+function closemenu(){
+  sidemenu.style.right="-200px";
+}
+</script>
+
+
+
+
+</html>
