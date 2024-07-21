@@ -102,7 +102,8 @@ nav ul li a:hover::after {
   color: #fff;
 }
 .sub-title-2{ 
-  font-family: Verdana, Geneva, Tahoma, sans-serif;}
+  font-family: Verdana, Geneva, Tahoma, sans-serif;  
+}
 
 .tab-titles {
   display: flex;
@@ -137,7 +138,7 @@ nav ul li a:hover::after {
 
 }
 .tab-contents ul li span{
-  color: #b54769;
+  color: #ff004f;
   font-size: 14px;
 }
 
