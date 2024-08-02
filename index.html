@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pradeep Portfolio Website
+  <title>Pradeep Portfolio 
   </title>
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/2ce1a97fb6.js" crossorigin="anonymous"></script>
@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <div id="header">
+  <header id = "header">
     <div class="container">
       <nav>
         <img src="images/logo.png" class="logo">
@@ -34,10 +34,10 @@
         <h1>Hi, I'm <span>Pradeep Sajnani</span><br>from India</h1>
       </div>
     </div>
-  </div>
+</header>
 
   <!-- ------------------------About-------------------- -->
-  <div id="about">
+  <section id = "about">
     <div class="container">
       <div class="row">
         <div class="about-col-1">
@@ -49,10 +49,10 @@
           </p>
 
           <div class="tab-titles">
-            <p class="tab-links active-link" onclick="opentab('skills')"> Skills </p>
-            <p class="tab-links" onclick="opentab('experience')"> Experience </p>
-            <p class="tab-links" onclick="opentab('education')"> Education </p>
-            <p class="tab-links" onclick="opentab('certification')">Certification </p>
+            <p class="tab-links active-link" data-tab="skills" onclick="opentab(event, 'skills')"> Skills </p>
+            <p class="tab-links" data-tab="experience" onclick="opentab(event, 'experience')"> Experience </p>
+            <p class="tab-links" data-tab="education" onclick="opentab(event, 'education')"> Education </p>
+            <p class="tab-links" data-tab="certification" onclick="opentab(event, 'certification')"> Certification </p>
           </div>
           <!-- ---------------------------Skillls----------------------- -->
           <div class="tab-contents active-tab" id="skills">
@@ -112,18 +112,16 @@
               </li>
             </ul>
           </div>
-
-
         </div>
       </div>
     </div>
-  </div>
+  </section>
   <!-- -----------------------Services----------------- -->
-  <div id="services">
+  <section id = "services">
     <div class="container">
       <h1 class="sub-title">My Projects</h1>
       <div class="services-list">
-        <div>
+        <article>
           <i class="fa-brands fa-react fa-spin-pulse"></i>
           <h2>Blog Post App (React Application)</h2>
           <p>Developed a React application with the goal of creating a "Blog Post
@@ -131,8 +129,8 @@
             post details, edit existing posts, and delete posts.</p><br>
           <p><b>Technologies Used:</b> React, JavaScript, HTML, CSS</p>
           <a href="#">Learn more</a>
-        </div>
-        <div>
+        </article>
+        <article>
           <i class="fa-solid fa-cloud"></i>
           <h2>Azure Cloud Services Integration Project</h2>
           <p>
@@ -146,8 +144,8 @@
           <p>Technologies Used: C#, Azure Kubernetes Cluster, Cloud shell, Node JS Application, Azure App
             Service, Docker Service, Linux CLI etc.</p>
           <a href="#">Learn more</a>
-        </div>
-        <div>
+        </article>
+        <article>
           <i class="fa-brands fa-node-js"></i>
           <h2>Result Management Application
           </h2>
@@ -155,17 +153,16 @@
             results. Integrated a cloud-based MongoDB database for easy access from anywhere.</p><br>
           <p><b>Technologies Used:</b> HTML, CSS, JavaScript, MongoDB & NodeJS</p>
           <a href="#">Learn more</a>
-        </div>
-
+        </article>
       </div>
     </div>
-  </div>
+  </section>
   <!-- -----------------------------portfolio------------ -->
-  <div id="portfolio">
+  <section id="portfolio">
     <div class="container">
       <h1 class="sub-title">My Services</h1>
       <div class="work-list">
-        <div class="work">
+        <article class="work">
 
           <img src="images/code-work.png">
 
@@ -175,10 +172,10 @@
             <a href="https://pradeep7867.github.io/InshapeCityGym/"><i class="fa-solid fa-arrow-up-right-from-square" style="color: #ff004f;"></i></a>
           </div>
 
-        </div>
+        </article>
 
 
-        <div class="work">
+        <article class="work">
           <img src="images/cloud-work.png">
           <div class="layer">
             <h3>"Development & Cloud Solutions</h3>
@@ -187,25 +184,25 @@
               and exceptional user experiences.</p>
             <a href="https://github.com/Pradeep7867/AWS-Cloud-hands-on-"><i class="fa-solid fa-arrow-up-right-from-square" style="color: #ff004f;"></i></a>
           </div>
-        </div>
+        </article>
 
 
-        <div class="work">
+        <article class="work">
           <img src="images/cyber-work.png">
           <div class="layer">
             <h3>Security Solutions</h3>
             <p>Enhancing your digital protection through expert guidance.</p>
             <a href="#"><i class="fa-solid fa-arrow-up-right-from-square" style="color: #ff004f;"></i></a>
           </div>
-        </div>
+        </article>
 
       </div>
       <a href="https://github.com/Pradeep7867?tab=repositories" class="btn" target="_blank">See more</a>
     </div>
-  </div>
+  </section>
 
   <!-- --------------------------------Contact------------------ -->
-  <div id="contact">
+  <section id="contact">
 
     <div class="container">
       <div class="row">
@@ -237,18 +234,14 @@
           <span id="msg"></span>
         </div>
       </div>
-
     </div>
-    <div class="copyright">
-      <p>Copyright <i class="fa-regular fa-copyright"></i> Pradeep, Made by Pradeep's Tutorial</p>
-    </div>
-  </div>
-</body>
-
-<!----------------Script for typewriter------------->
- 
+  </section>
+    <footer class="copyright">
+      <p> Copyright <i class="fa-regular fa-copyright"></i> Pradeep, Made by Pradeep's Tutorial</p>
+    </footer>
+</body> 
 <script>
-
+//<!----------------Script for typewriter------------->
 var typed = new Typed(".auto-type",{
   strings : ["Associate Software Engineer","Cloud Engineer","Developer"],
   typeSpeed :150,
@@ -256,9 +249,8 @@ var typed = new Typed(".auto-type",{
   loop : true
 
 })
-</script>
-<!-- -----------------------mobile script------------->
-<script>
+//<!-- -----------------------mobile script------------->
+
 var sidemenu = document.getElementById("sidemenu");
 
 function openmenu(){
@@ -269,8 +261,4 @@ function closemenu(){
   sidemenu.style.right="-200px";
 }
 </script>
-
-
-
-
 </html>
