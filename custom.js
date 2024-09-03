@@ -1,3 +1,21 @@
+// Import the functions you need from the Firebase SDKs
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore.js";
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDh84E-a1utVEu2DDbr8DTGzM6CdtW7ZGg",
+  authDomain: "myportfoliocontactform-85f4c.firebaseapp.com",
+  projectId: "myportfoliocontactform-85f4c",
+  storageBucket: "myportfoliocontactform-85f4c.appspot.com",
+  messagingSenderId: "107892138862",
+  appId: "1:107892138862:web:887c7efdb1146dbb17977f"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
 document.addEventListener("DOMContentLoaded", () => {
   const tablinks = document.getElementsByClassName("tab-links");
   const tabcontents = document.getElementsByClassName("tab-contents");
@@ -19,22 +37,41 @@ document.addEventListener("DOMContentLoaded", () => {
       opentab(event, tablink.getAttribute("data-tab"));
     });
   }
+}); // <-- Closing brace for DOMContentLoaded event listener
 
-  // Google Sheets form handling
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbzWUaBh1gakReOxrX96qeTmznw44Uoif106HYIa0nanA4pwBA4yCyaUbtAesZcq5RZqqw/exec';
-  const form = document.forms['submit-to-google-sheet'];
-  const msg = document.getElementById("msg");
+// Form handling
+const form = document.getElementById("contactForm");
+const msg = document.getElementById("msg");
 
-  form.addEventListener('submit', e => {
+if (form) {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => {
-        msg.innerHTML = "Message Sent Successfully";
-        setTimeout(() => {
-          msg.innerHTML = "";
-        }, 3000); 
-        form.reset();
-      })
-      .catch(error => console.error('Error!', error.message));
+
+    console.log("Form submission handler triggered");
+    const name = form.name.value;
+    const email = form.email.value;
+    const message = form.message.value;
+
+    try {
+      // Add a new document with a generated ID
+      await addDoc(collection(db, "contactSubmissions"), {
+        name: name,
+        email: email,
+        message: message,
+        timestamp: new Date()
+      });
+
+      // Display success message
+      console.log("Message Submitted Successfully!");
+      msg.innerHTML = "Message Sent Successfully";
+      setTimeout(() => {
+        msg.innerHTML = "";
+      }, 4000);
+
+      // Reset the form
+      form.reset();
+    } catch (error) {
+      console.error("Error adding document: ", error.message);
+    }
   });
-});
+}
