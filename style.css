@@ -65,6 +65,12 @@ nav {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  background: transparent;
+  z-index: 1;
+  padding:10px, 10%;
+  position: relative;
+  width: 100%;
+
 }
 
 .logo {
